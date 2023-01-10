@@ -1,0 +1,35 @@
+h1 {
+  max-width: 300px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.home__input {
+  padding-top: 5px;
+  padding-bottom: 7px;
+}
+
+.home__input input {
+  width: 100%;
+  display: block;
+}
+
+.have-no-account {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.home__input__button {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+.home__input--sms {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+

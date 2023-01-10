@@ -1,0 +1,43 @@
+.task-image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+
+}
+.task-image-dd img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+}
+.task-image > div {
+  position: relative;
+}
+.task-image--wrapper {
+  position: relative;
+}
+.task-image--background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 116;
+}
+.task-image--field {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  z-index: 10;
+}
+.interactive {
+  position: relative;
+}
+.image {
+  position: absolute;
+  top: 22%;
+  left: 21.7%;
+  transform: scale(2);
+  z-index: -1;
+}

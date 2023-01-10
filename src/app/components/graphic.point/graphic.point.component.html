@@ -1,0 +1,9 @@
+<div
+  *ngIf="hidden !== true && point.r === r"
+  class="task-image--dot"
+  [ngClass]="point.isHit ? '_active' : '_inactive'"
+  [ngStyle]="{
+    left: left + 'px',
+    top: top + 'px'
+  }"
+></div>

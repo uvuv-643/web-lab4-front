@@ -1,0 +1,26 @@
+<div class="home">
+  <div>
+    <h1>Enter your credentials</h1>
+    <div class="home__form">
+      <div class="home__input">
+        <p-inputMask [(ngModel)]="phone" mask="+7(999)-999-99-99" placeholder="+7(___)-___-__-__" [style]="{width: '100%'}"></p-inputMask>
+      </div>
+      <div class="home__input">
+        <input type="password" pInputText [(ngModel)]="password" placeholder="Password">
+      </div>
+
+      <div class="home__input">
+        <p-checkbox
+          [binary]="true"
+          [(ngModel)]="remember"
+          [label]="'Remember me'"
+        ></p-checkbox>
+      </div>
+      <div class="home__input">
+        <button pButton type="button" label="Sign in" class="home__input__button" (click)="onSubmit()"></button>
+      </div>
+      <div class="p-error" *ngIf="error">Wrong credentials</div>
+      <a href="#" class="have-no-account" [routerLink]="['/register']">Dont have an account?</a>
+    </div>
+  </div>
+</div>

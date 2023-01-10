@@ -1,0 +1,43 @@
+.top-bar {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(59, 130, 246);
+  color: #FFFFFF;
+}
+.top-bar__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.top-bar__title__description {
+  display: flex;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.top-bar__title__description div {
+  margin-right: 15px;
+}
+.top-bar__login {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.top-bar__login i {
+  margin-left: 15px;
+}
+
+.fff .p-button:focus {
+  box-shadow: none !important;
+}
+
+@media (max-width: 671px) {
+  .top-bar {
+    display: block;
+  }
+  .top-bar__login {
+    display: flex;
+    margin-top: 5px;
+  }
+}

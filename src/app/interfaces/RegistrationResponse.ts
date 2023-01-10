@@ -1,0 +1,3 @@
+interface RegistrationResponse {
+  success : boolean,
+}

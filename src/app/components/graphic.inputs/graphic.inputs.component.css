@@ -1,0 +1,14 @@
+.field-checkbox label {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+.field-checkbox {
+  margin-right: 5px;
+}
+.graphic-input-group {
+  padding-bottom: 20px;
+}
+.graphic-input-group-label {
+  margin-bottom: 5px;
+}

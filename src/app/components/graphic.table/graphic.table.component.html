@@ -1,0 +1,28 @@
+<div class="graphic-table">
+  <div class="graphic-table-inner">
+    <p-table [value]="points" [rowHover]="true">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>X</th>
+          <th>Y</th>
+          <th>R</th>
+          <th>Is hit</th>
+          <th>Created at</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-dot>
+        <tr>
+          <td>{{dot.x.toFixed(2)}}</td>
+          <td>{{dot.y.toFixed(2)}}</td>
+          <td>{{dot.r.toFixed(2)}}</td>
+          <td>{{dot.isHit ? 'yes' : 'no'}}</td>
+          <td>{{ dot.createdAt.toLocaleDateString("ru-RU") }} <br> {{dot.createdAt.toLocaleTimeString("ru-RU")}}</td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+    <div *ngIf="points.length === 0" class="graphic-table-empty">
+      Add point on graphic to see the result
+    </div>
+  </div>
+</div>

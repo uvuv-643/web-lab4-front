@@ -1,0 +1,14 @@
+.graphic-table-empty {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: rgba(0, 0, 0, 0.02);
+}
+.graphic-table {
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
+}
+.graphic-table-inner {
+  padding-bottom: 30px;
+}

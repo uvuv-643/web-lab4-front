@@ -1,0 +1,14 @@
+    <h1>Enter SMS code sent on your phone</h1>
+    <div class="home__form">
+      <div class="home__input home__input--sms">
+        <input type="text" #code1s (keyup)="onChangeCode1($event)" pInputText [ngStyle]="inputStyles" [style]="{color: !this.error ? 'inherit' : 'red', borderColor: !this.error ? 'inherit' : 'red'}" [(ngModel)]="code1" [maxlength]="1">
+        <input type="text" #code2s (keyup)="onChangeCode2($event)" pInputText [ngStyle]="inputStyles" [style]="{color: !this.error ? 'inherit' : 'red', borderColor: !this.error ? 'inherit' : 'red'}" [(ngModel)]="code2" [maxlength]="1">
+        <input type="text" #code3s (keyup)="onChangeCode3($event)" pInputText [ngStyle]="inputStyles" [style]="{color: !this.error ? 'inherit' : 'red', borderColor: !this.error ? 'inherit' : 'red'}" [(ngModel)]="code3" [maxlength]="1">
+        <input type="text" #code4s (keyup)="onChangeCode4($event)" pInputText [ngStyle]="inputStyles" [style]="{color: !this.error ? 'inherit' : 'red', borderColor: !this.error ? 'inherit' : 'red'}" [(ngModel)]="code4" [maxlength]="1">
+      </div>
+      <div class="home__input">
+        <button pButton type="button" label="Sign up" class="home__input__button" (click)="submitForm()"></button>
+      </div>
+      <a [ngStyle]="{ textDecoration: 'none', color: 'black' }" *ngIf="resendAfter > 0">You can send code again after {{ resendAfter }} seconds</a>
+      <a [ngStyle]="{ cursor: 'pointer', textDecoration: 'none' }" *ngIf="resendAfter <= 0" (click)="resendCode()" >Send me code again</a>
+    </div>

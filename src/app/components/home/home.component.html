@@ -1,0 +1,13 @@
+<div class="container-fluid home">
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <div class="home-graphic">
+        <app-graphic [points]="points" (updatePoints)="updatePoints()" [r]="r"></app-graphic>
+        <app-graphic-inputs (onChangeR)="onChangeRadius($event)" (updatePoints)="updatePoints()"></app-graphic-inputs>
+      </div>
+    </div>
+    <div class="col-md-4 order-md-0 home-table">
+      <app-graphic-table [points]="points"></app-graphic-table>
+    </div>
+  </div>
+</div>

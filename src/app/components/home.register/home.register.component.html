@@ -1,0 +1,27 @@
+<div class="home">
+  <div>
+
+    <app-home-register-main
+      *ngIf="isOpenedHomeRegisterPage === true"
+      [phone]="phone"
+      [username]="username"
+      [password]="password"
+      [phoneError]="error"
+      (onSubmitForm)="onSendSMS($event)"
+    ></app-home-register-main>
+    <app-home-register-sms
+      *ngIf="isOpenedHomeRegisterPage === false"
+      [resendAfter]="resendAfter"
+      [error]="errorSMS"
+      (onResendCode)="sendSMS()"
+      (onSubmit)="onSubmit($event)"
+    ></app-home-register-sms>
+
+    <p-dialog header="" [modal]="true" [(visible)]="displayRegisterSuccess" (onHide)="goToLogin()">
+      <div>Successfully registered an account</div>
+      <br>
+      <button pButton type="button" label="Sign in" class="home__input__button" (click)="goToLogin()"></button>
+    </p-dialog>
+
+  </div>
+</div>

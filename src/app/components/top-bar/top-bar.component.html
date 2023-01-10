@@ -1,0 +1,20 @@
+<div class="top-bar">
+  <div class="top-bar__title">
+    <div>Web Lab 4</div>
+    <div class="top-bar__title__description">
+      <div>#116677</div>
+      <div>Zinatulin Artem Vitalyevich</div>
+      <div>P32121</div>
+    </div>
+  </div>
+  <div *ngIf="username !== null">
+    <div class="top-bar__login" (click)="menu.toggle($event)">
+        <div>{{ username }}</div>
+        <i class="pi pi-user" style="font-size: 1.5rem"></i>
+    </div>
+    <p-menu #menu [popup]="true" [model]="items" [style]="{marginTop: '10px'}"></p-menu>
+  </div>
+</div>
+
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
+

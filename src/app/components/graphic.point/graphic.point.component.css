@@ -1,0 +1,17 @@
+.task-image--dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  margin-top: -4px;
+  background: blueviolet;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 3;
+}
+.task-image--dot._active {
+  background: seagreen;
+}
+.task-image--dot._inactive {
+  background: brown;
+}

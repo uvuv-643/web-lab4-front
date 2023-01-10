@@ -1,0 +1,37 @@
+<div class="container-fluid" style="padding-top: 15px;">
+
+  <div class="graphic-input-group">
+    <div class="graphic-input-group-label">X coordinate</div>
+    <div class="d-flex">
+      <div class="field-checkbox" *ngFor="let xValue of xAvailableValues">
+        <p-checkbox name="group1" [value]="xValue" [(ngModel)]="selectedX" [inputId]="'x' + xValue"></p-checkbox>
+        <label [for]="'x' + xValue">{{ xValue }}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="graphic-input-group p-fluid">
+    <div class="graphic-input-group-label">Y coordinate [-3, 3]</div>
+    <div>
+      <input type="text" *ngIf="yCoordinateError" class="ng-invalid ng-dirty" pInputText [ngStyle]="{fontSize: '14px', padding: '6px 12px'}" [(ngModel)]="selectedY" placeholder="Enter Y coordinate">
+      <input type="text" *ngIf="!yCoordinateError" (input)="onChangeY()" pInputText [ngStyle]="{fontSize: '14px', padding: '6px 12px', maxWidth: '230px'}" [(ngModel)]="selectedY" placeholder="Enter Y coordinate">
+    </div>
+    <small *ngIf="yCoordinateError" class="p-error">Y coordinate is out of range</small>
+  </div>
+
+  <div class="graphic-input-group">
+    <div class="graphic-input-group-label">Radius</div>
+    <div class="d-flex">
+      <div class="field-checkbox" *ngFor="let rValue of rAvailableValues">
+        <p-checkbox name="group2" (onChange)="onChangeRadius()" [value]="rValue.toString()" [ngClass]="rError ? 'ng-invalid ng-dirty' : ''" [(ngModel)]="selectedR" [inputId]="'r' + rValue"></p-checkbox>
+        <label [for]="'r' + rValue">{{ rValue }}</label>
+      </div>
+    </div>
+    <small *ngIf="rError" class="p-error">You have to choose exactly 1 non-zero element</small>
+  </div>
+
+  <div class="graphic-input-button">
+    <button pButton type="button" class="p-button-sm" label="Add point" (click)="onSubmit()"></button>
+  </div>
+
+</div>

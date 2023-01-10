@@ -1,0 +1,13 @@
+<div *ngIf="r > 0">
+
+  <div *ngFor="let x of planeCellsX">
+    <div class="graphic-plane-xline" [ngStyle]="{top: 'calc(50% - ' + (x) + 'px)', width: size + 'px'}"></div>
+    <div class="graphic-plane-xline" [ngStyle]="{top: 'calc(50% + ' + (x) + 'px)', width: size + 'px'}"></div>
+  </div>
+
+  <div *ngFor="let y of planeCellsX">
+    <div class="graphic-plane-yline" [ngStyle]="{left: 'calc(50% - ' + (y) + 'px)', height: size + 'px'}"></div>
+    <div class="graphic-plane-yline" [ngStyle]="{left: 'calc(50% + ' + (y) + 'px)', height: size + 'px'}"></div>
+  </div>
+
+</div>

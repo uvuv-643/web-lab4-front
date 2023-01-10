@@ -1,0 +1,19 @@
+<div class="graphic-wrapper">
+  <div class="interactive">
+    <div class="task-image">
+      <div>
+        <div class="task-image--background" (click)="addPoint($event)" [ngStyle]="{width: size + 'px', height: size + 'px'}"></div>
+        <div class="task-image--wrapper" [ngStyle]="{width: size + 'px', height: size + 'px'}">
+          <app-graphic-plane [size]="size" [r]="r"></app-graphic-plane>
+          <app-graphic-axes [r]="r"></app-graphic-axes>
+          <div class="task-image--dot" *ngFor="let point of points">
+            <app-graphic-point [point]="point" [size]="size" [r]="r"></app-graphic-point>
+          </div>
+          <div class="task-image-dd" *ngIf="r !== 0">
+            <img src="./assets/img/image.png" alt="#">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
